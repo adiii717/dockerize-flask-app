@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web-app:
+  build: ./app
+  environment:
+    - HOST=0.0.0.0
+    - DEBUG=true
+  ports:
+   - "5000:5000"
+  volumes:
+   - ./app/:/app
